@@ -1,0 +1,232 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+body > main {
+  -ms-overflow-x: hidden;
+}
+
+@supports (-ms-ime-align: auto) {
+  body > main {
+    overflow: hidden;
+  }
+}
+/*========
+    link 
+========*/
+.a--link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*========
+    scroll
+========*/
+.a--scroll {
+  width: 0.2rem;
+  height: 10rem;
+  background-color: #383639;
+  position: absolute;
+  transform: translateY(50%);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  z-index: 120;
+  text-decoration: none !important;
+}
+.a--scroll::before {
+  content: "SCROLL";
+  font-family: "Oswald", sans-serif;
+  font-size: 1.6rem;
+  color: #383639;
+  min-width: max-content;
+  transform: translateX(-50%);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -3rem;
+}
+
+/*========
+    heading
+========*/
+.heading {
+  font-size: 6.4rem;
+  font-family: "Oswald", sans-serif;
+}
+
+/*========
+    sub-heading
+========*/
+.sub-heading h3 {
+  font-size: 2.4rem;
+  font-family: "Oswald", sans-serif;
+  padding-bottom: 3rem;
+  position: relative;
+}
+.sub-heading h3::after {
+  content: "";
+  width: 2rem;
+  height: 0.4rem;
+  background-color: #c01920;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/*========
+    collapse button
+========*/
+.collapse-button {
+  display: flex;
+  padding: 0.5rem;
+}
+.collapse-button .hambuger--list {
+  width: 2rem;
+  height: 2rem;
+  padding-left: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+.collapse-button .hambuger--list li {
+  width: 0.8rem;
+  height: 0.2rem;
+  background-color: white;
+  margin: 0.1rem;
+  position: relative;
+}
+.collapse-button .hambuger--list li::before {
+  content: "";
+  width: 0.2rem;
+  height: 0.2rem;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: -0.4rem;
+}
+
+/*========
+    rect button
+========*/
+.rect-button {
+  width: 5rem;
+  height: 5rem;
+  background-color: #c01920;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.rect-button span {
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: white;
+  position: relative;
+}
+.rect-button span::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-right: 0.2rem solid white;
+  border-top: 0.2rem solid white;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -0.4rem;
+  right: 0;
+}
+
+/*========
+    object decorate
+========*/
+.obj-decorate {
+  width: 100%;
+}
+
+/*========
+    under background
+========*/
+.under-background {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+/*========
+    contain-text
+========*/
+.contain-text--big {
+  font-size: 4.8rem;
+  font-weight: bold;
+  color: #383639;
+  letter-spacing: 0.3rem;
+}
+
+.contain-text--small {
+  font-size: 1.6rem;
+  color: #383639;
+  letter-spacing: 0.1rem;
+  line-height: 2.5rem;
+}
+
+/*========
+    more button
+========*/
+.more-button {
+  position: relative;
+  width: max-content;
+  font-size: 1.6rem;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  padding: 1rem;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+  border-bottom: 0.2rem solid white;
+}
+
+/*========
+    title -- main
+========*/
+/*========
+    title -- main
+========*/
+@media only screen and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4da6ff;
+}
+
+/*# sourceMappingURL=common.css.map */
