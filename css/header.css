@@ -8,18 +8,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1020;
 }
-.header h1 {
+@media only screen and (max-width: 767px) {
+  .header {
+    height: 6rem;
+  }
+}
+.header-logo {
   font-family: "Oswald", sans-serif;
   font-size: 6rem;
   padding-bottom: 0.5rem;
   position: relative;
 }
-.header span {
+@media only screen and (max-width: 767px) {
+  .header-logo {
+    font-size: 2.6rem;
+    padding: 0;
+  }
+}
+.header-recruit {
   position: relative;
   padding-top: 0.5rem;
   font-size: 2rem;
   margin-left: 3.5rem;
+  font-family: "Oswald", sans-serif;
+}
+@media only screen and (max-width: 767px) {
+  .header-recruit {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+  }
 }
 
 /*========
@@ -31,8 +53,10 @@
   left: 0;
   bottom: 0;
   height: 100%;
-  width: 40rem;
-  background-color: white;
+  width: 50rem;
+  max-width: 100%;
+  background-color: #fff;
+  padding: 0 5rem;
   display: flex;
   flex-direction: row-reverse;
   transform: translateX(calc(-100% + 10rem));
@@ -41,6 +65,7 @@
 }
 .nav-menu.active {
   transform: translateX(0%);
+  overflow-y: auto;
 }
 .nav-menu .menu-button {
   min-width: 10rem;
@@ -49,29 +74,49 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.nav-menu .menu-button button {
-  width: 3rem;
-  height: 3rem;
-  outline: none;
-  border: none;
-}
-.nav-menu .menu-warp {
-  width: 100%;
-  height: 100%;
-  margin-top: 8rem;
-  padding: 0 4rem;
-}
-.nav-menu .menu-warp ul {
-  width: 100%;
-}
-.nav-menu .menu-warp ul li {
-  color: white;
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
-  position: relative;
+  position: absolute;
+  right: 0;
 }
 
+.button-open-menu {
+  outline: none;
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  transform: rotate(-90deg);
+  transition: all 0.5s ease;
+}
+.button-open-menu.active {
+  top: 5rem;
+  right: 5rem;
+  transform: rotate(-360deg);
+}
+.button-open-menu.active span:nth-child(1) {
+  transform: rotate(-45deg);
+}
+.button-open-menu.active span:nth-child(3) {
+  transform: rotate(45deg);
+}
+.button-open-menu span {
+  width: 1.5rem;
+  height: 0.2rem;
+  margin: 0.2rem;
+  background-color: #383639;
+}
+.button-open-menu::after {
+  content: "MENU";
+  font-family: "Oswald", sans-serif;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 0.2rem;
+  left: 3rem;
+}
+
+/*========
+	menu wrap
+========*/
 /*========
 	entry
 ========*/

@@ -8,13 +8,16 @@
 
 body {
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
-}
-
-@media screen and (max-width: 768px) {
-    body {
+    padding: 0 10rem;
+    @media screen and (max-width: 768px) {
         font-size: 1.4rem;
     }
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
 }
+
+
 
 body>main {
     -ms-overflow-x: hidden;
@@ -35,6 +38,7 @@ body>main {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 2;
 }
 
 /*========
@@ -51,9 +55,22 @@ body>main {
     bottom: 0;
     margin: 0 auto;
     z-index: 120;
+    animation: ascroll 1.5s infinite;
     text-decoration: none !important;
+    @include ipadpro{
+        height: 4rem;
+    }
+    @include mobile{
+        height: 1.4rem;
+        width: 1.4rem;
+        background-color: transparent;
+        border-right: .2rem solid #383639;
+        border-bottom: .2rem solid #383639;
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg);
+    }
     &::before{
-        content: 'SCROLL';
         font-family: 'Oswald', sans-serif;
         font-size: 1.6rem;
         color: #383639;
@@ -63,6 +80,65 @@ body>main {
         position: absolute;
         left: 0;
         top: -3rem;
+        @media only screen and (min-width: 769px){
+            content: 'SCROLL';
+        }
+    }
+}
+@keyframes ascroll {
+  0%{
+    bottom: 0;
+    opacity: 1;
+  }
+  60%{
+    bottom: -15%;
+  }
+  80%{
+    bottom: -15%;
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+    bottom: 0;
+  }
+}
+
+/*========
+    play
+========*/
+.a--play{
+    width: 11.5rem;
+    height: 11.5rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    z-index: 120;
+    text-decoration: none !important;
+    @include mobile{
+        width: 6rem;
+        height: 6rem;
+    }
+    &::before{
+        content: '';
+        border-left: 2.2rem solid #7a7a78;
+        border-top: 2.2rem solid transparent;
+        border-right: none;
+        border-bottom: 2.2rem solid transparent;
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        transform: translateY(-50%);  
+        @include mobile{
+            border-left: 2.2rem solid #7a7a78;
+            border-top: 1.2rem solid transparent;
+            border-bottom: 1.2rem solid transparent;
+        }  
     }
 }
 
@@ -72,8 +148,21 @@ body>main {
 .heading{
     font-size: 6.4rem;
     font-family: 'Oswald', sans-serif;
+    @include mobile{
+        font-size: 3.5rem;
+    }
 }
 
+.heading-title{
+    font-size: 3.6rem;
+    margin: 0 3rem;
+    font-weight: bold;
+    letter-spacing: .5rem;
+    display: inline-block;
+    @include mobile{
+        font-size: 2.4rem;
+    }
+}
 /*========
     sub-heading
 ========*/
@@ -94,12 +183,20 @@ body>main {
         }
     }
 }
+.sub-title{
+    font-weight: bold;
+    font-size: 3.6rem;
+    margin: 3rem 0;
+    display: block;            
+}
 /*========
     collapse button
 ========*/
 .collapse-button{
     display: flex;
     padding: .5rem;
+    height: 3rem;
+    cursor: pointer;
     .hambuger--list{
         width: 2rem;
         height: 2rem;
@@ -172,11 +269,15 @@ body>main {
     font-weight: bold;
     color: #383639;
     letter-spacing: .3rem;
+    @include mobile{
+        font-size: 3.2rem;
+        letter-spacing: 0;
+    }
 }
 .contain-text--small{
     font-size: 1.6rem;
     color: #383639;
-    letter-spacing: .1rem;
+    letter-spacing: .2rem;
     line-height: 2.5rem;
 }
 /*========
@@ -191,13 +292,68 @@ body>main {
     padding: 1rem;
     text-decoration: none !important;
     text-transform: uppercase;
-    display: block;
+    display: table;
     margin: 0 auto;
     border-bottom: .2rem solid white;
+}
+.dropdown{
+    width: 100%;
+    padding: 4rem 0;
+    @include mobile{
+        padding: 2rem;
+    }
+    h3{
+        font-size: 1.4rem;
+        color: #eee;
+        padding: 2rem 0;
+        position: relative;
+    }
+    .wrap-w{
+        padding-left: 2rem;
+    }
+    .wrap-w li{
+        position: relative;
+        padding: 1rem 0;
+        color: #eee;
+        font-size: 1.4rem;
+        position: relative;
+        overflow: hidden; 
+        &::after{
+            content: '';
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 0;
+            position: absolute;
+            background-color: rgb(127, 64, 241);
+        }
+        &:hover::after{
+            animation: overlayer0 .5s 1;
+        }
+    }
 }
 /*========
     title -- main
 ========*/
+@keyframes overlayer0 {
+  0%{
+    width: 0%;
+    left: 0%;
+  }
+  45%{
+    width: 100%;
+    left: 0%;
+  }
+  60%{
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    width: 100%;
+    left: 100%;
+  }
+}
 /*========
     title -- main
 ========*/
@@ -211,16 +367,16 @@ body>main {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background-color: white;
+    background-color: #969696;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background-color: black;
+    background-color: #c01920;
     border-radius: 1rem;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #4da6ff;
+    // background-color: #c01920;
 }

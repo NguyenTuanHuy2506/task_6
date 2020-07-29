@@ -9,23 +9,36 @@
 	width: 100%;
 	height: 12rem;
 	background-color: white;
-	// text-align: center;
-	// padding: 2.2rem 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	h1{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1020;
+	@media only screen and (max-width: 767px){
+		height: 6rem;
+	}
+	&-logo{
 		font-family: 'Oswald', sans-serif;
 		font-size: 6rem;
 		padding-bottom: .5rem;
 		position: relative;
-		
+		@media only screen and (max-width: 767px){
+			font-size: 2.6rem;
+			padding: 0;
+		}
 	}
-	span{
+	&-recruit{
 		position: relative;
 		padding-top: .5rem;
 		font-size: 2rem;
 		margin-left: 3.5rem;
+		font-family: 'Oswald', sans-serif;
+		@media only screen and (max-width: 767px){
+			font-size: 1.4rem;
+			margin-left: 1rem;
+		}
 	}
 }
 /*========
@@ -37,47 +50,69 @@
 	left: 0;
 	bottom: 0;
 	height: 100%;
-	width: 40rem;
-	background-color: white;
+	width: 50rem;
+	max-width: 100%;
+	background-color: #fff;//#222;
+	padding: 0 5rem;
 	display: flex;
 	flex-direction: row-reverse;
 	transform: translateX(calc(-100% + 10rem));
+	
 	transition: all 1s ease;
 	z-index: 1030;
 	&.active{
 		transform: translateX(0%);
+		overflow-y: auto;
 	}
 	.menu-button{
 		min-width: 10rem;
 		height: 100%;
 		text-align: center;
 		display: flex; align-items: center; justify-content: center;
-		button{
-			width: 3rem;
-			height: 3rem;
-			outline: none;
-			border: none;
-			span{
-
-			}
-		}
+		position: absolute;
+		right:0;
+		
 	}
-	.menu-warp{
-		width: 100%;height: 100%;
-		margin-top: 8rem;
-		padding: 0 4rem;
-		ul{
-			width: 100%;
-		}
-		ul li {
-			color: white;
-			margin: 1rem 0;
-			padding: .5rem 1rem;
-			position: relative;
-		}
-	}
-
 }
+.button-open-menu{
+	outline: none;
+	border: none;
+	position: absolute;
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	transform: rotate(-90deg);
+	transition: all .5s ease;
+	&.active{
+		top: 5rem;
+		right: 5rem;
+		transform: rotate(-360deg);
+		span:nth-child(1){
+			transform: rotate(-45deg);
+		}
+		span:nth-child(3){
+			transform: rotate(45deg);
+		}
+	}
+	span{
+		width: 1.5rem;
+		height: .2rem;
+		margin: .2rem;
+		background-color: #383639;
+	}
+	&::after{
+		content: 'MENU';
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.6rem;
+		position: absolute;
+		top: .2rem;
+		left: 3rem;
+	}
+}
+/*========
+	menu wrap
+========*/
+
 /*========
 	entry
 ========*/

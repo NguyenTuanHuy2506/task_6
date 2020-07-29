@@ -26,27 +26,97 @@
 	<!-- /build:css -->
 
 	<title>Task 6</title>
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
 	<header class="header">
 	<!-- build:header -->
-		<h1>LOGO
+		<h1 class="header-logo">LOGO
 			<a href="#link" class="a--link"></a>
 		</h1>
-		<span>RECRUITSITE<a href="#link" class="a--link"></a></span>
+		<span class="header-recruit">RECRUITSITE<a href="#link" class="a--link"></a></span>
 		<section class="nav-menu">
 			<div class="menu-button">
-				<button></button>
+				<button class="button-open-menu">
+					<span></span><span></span><span></span>
+				</button>
 			</div>
 			<div class="menu-warp">
-				<ul>
-					<li>メニュー<a href="#link" class="a--link"></a></li>
-					<li>メニュー<a href="#link" class="a--link"></a></li>
-					<li>メニュー<a href="#link" class="a--link"></a></li>
-					<li>メニュー<a href="#link" class="a--link"></a></li>
-				</ul>
+				<section class="em-info">
+					<div class="container">
+						<h3 class="heading-title">採用情報</h3>
+						<ul class="wrap wrap-3">
+							<li>
+								<div class="circle-icon">
+									<img src="images/assets/footer/img_icon01.png" alt="icon footer">
+								</div>
+								
+								<h3 class="sub-title">
+									福利厚生
+								</h3>
+							</li>
+							<li>
+								<div class="circle-icon">
+									<img src="images/assets/footer/img_icon02.png" alt="icon footer">
+								</div>
+								<h3 class="sub-title">
+									選考フロー
+								</h3>
+							</li>
+							<li>
+								<div class="circle-icon">
+									<img src="images/assets/footer/img_icon03.png" alt="icon footer">
+								</div>
+								
+								<h3 class="sub-title">
+									FAQ
+								</h3>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="link-footer">
+					<div class="container">
+						<div class="dropdown">
+							<h3>メニュー <a href="#link" class="a--link toggle-link"></a></h3>
+							<div class="toggle-div active">
+								<ul class="wrap-w">
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="dropdown">
+							<h3>メニュー <a href="#link" class="a--link toggle-link"></a></h3>
+							<div class="toggle-div">
+								<ul class="wrap-w">
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="dropdown">
+							<h3>メニュー <a href="#link" class="a--link toggle-link"></a></h3>
+							<div class="toggle-div">
+								<ul class="wrap-w">
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+									<li>∟メニュー <a href="#link" class="a--link"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
 		</section>
 		<section class="entry-fixed"> <span>ENTRY<a href="#link" class="a--link"></a></span></section>
@@ -68,7 +138,7 @@
 			<div class="container">
 				<div class="sub-heading">
 					<h3>NEWS</h3>
-					<div class="collapse-button">
+					<div class="collapse-button" data-target='#news-wrap' >
 						<ul class="hambuger--list">
 							<li></li>
 							<li></li>
@@ -77,7 +147,7 @@
 						<span>一覧を見る</span>
 					</div>
 				</div>
-				<div class="news-wrap">
+				<div class="news-wrap" id="news-wrap">
 					<ul>
 						<li>
 							<p>0000.00.00</p>
@@ -155,7 +225,7 @@
 						<div class="sub-heading">
 							<h3>MESSAGE</h3>
 						</div>
-						<p class="contain-text--big">キャッチコピーが入ります。キャッチコピーが入ります。</p>
+						<p class="contain-text--big">キャッチコピーが入ります。<br/>キャッチコピーが入ります。</p>
 					</li>
 					<li>
 						<p class="contain-text--small">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
@@ -170,6 +240,26 @@
 			<ul class="wrap wrap-3-4 reverse">
 				<li>
 					<div class="sub-heading">
+						<h3>BUSINESS</h3>
+					</div>
+					<span class="sub-title">事業概要</span>
+					<p class="contain-text--small">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+					<a href="" class="more-button">more</a>
+				</li>
+				<li>
+					<div class="wrap-img">
+						<img src="images/assets/business/img_business.jpg">
+						<a href="#link" class="a--play"></a>
+					</div>
+				</li>
+			</ul>
+		</section>
+	<!-- build: work -->
+		<section class="work">
+			<div class="under-background"></div>
+			<ul class="wrap wrap-3-4 ">
+				<li>
+					<div class="sub-heading">
 						<h3>WORK</h3>
 					</div>
 					<span class="sub-title">職種紹介</span>
@@ -181,17 +271,135 @@
 				</li>
 			</ul>
 		</section>
-	<!-- build: /business -->
+	<!-- build: /work -->
 	</main>
-	<footer>
+	<footer class="footer">
 	<!-- build:footer -->
+		<div class="under-background"></div>
+		<section class="working-env">
+			<div class="container">
+				<h3 class="heading-title">働く環境</h3>
+				<ul class="wrap wrap-2">
+					<li>
+						<div>
+							<img src="images/assets/working_env/img_workingenv01.jpg" alt="background working">
+							<a href="#link" class="rect-button"><span></span></a>
+						</div>
+						<h3 class="sub-title">
+							船員座談会
+						</h3>
+						<p class="contain-text--small">
+							テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+						</p>
+					</li>
+					<li>
+						<div>
+							<img src="images/assets/working_env/img_workingenv02.jpg" alt="background working">
+							<a href="#link" class="rect-button"><span></span></a>
+						</div>
+						<h3 class="sub-title">
+							福利厚生
+						</h3>
+						<p class="contain-text--small">
+							テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="em-info">
+			<div class="container">
+				<h3 class="heading-title">採用情報</h3>
+				<ul class="wrap wrap-3">
+					<li>
+						<div class="circle-icon">
+							<img src="images/assets/footer/img_icon01.png" alt="icon footer">
+						</div>
+						
+						<h3 class="sub-title">
+							福利厚生
+						</h3>
+					</li>
+					<li>
+						<div class="circle-icon">
+							<img src="images/assets/footer/img_icon02.png" alt="icon footer">
+						</div>
+						
+						<h3 class="sub-title">
+							選考フロー
+						</h3>
+					</li>
+					<li>
+						<div class="circle-icon">
+							<img src="images/assets/footer/img_icon03.png" alt="icon footer">
+						</div>
+						
+						<h3 class="sub-title">
+							FAQ
+						</h3>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="link-footer">
+			<div class="container">
+				<div class="wrap">
+					<!-- <ul class="wrap-w">
+						<li>メニュー <a href="#link" class="a--link"></a></li>
+						<li>メニュー <a href="#link" class="a--link"></a></li>
+						<li>メニュー <a href="#link" class="a--link"></a></li>
+					</ul> -->
+					<div class="dropdown">
+						<h3>メニュー <a href="#link" class="a--link"></a></h3>
+						<h3>メニュー <a href="#link" class="a--link"></a></h3>
+						<h3>メニュー <a href="#link" class="a--link"></a></h3>
+					</div>
+					<div class="dropdown">
+						<h3>メニュー <a href="#link" class="a--link toggle-link"></a></h3>
+						<div class="toggle-div">
+							<ul class="wrap-w">
+								<li>∟メニュー <a href="#link" class="a--link"></a></li>
+								<li>∟メニュー <a href="#link" class="a--link"></a></li>
+								<li>∟メニュー <a href="#link" class="a--link"></a></li>
+								<li>∟メニュー <a href="#link" class="a--link"></a></li>
+								<li>∟メニュー <a href="#link" class="a--link"></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="dropdown">
+						<h3>メニュー <a href="#link" class="a--link toggle-link"></a></h3>
+						<div class="toggle-div">
+							<ul class="wrap-w">
+								<li>∟メニュー <a href="#link" class="a--link"></a></li>
+								<li>∟メニュー <a href="#link" class="a--link"></a></li>
+								<li>∟メニュー <a href="#link" class="a--link"></a></li>
+								<li>∟メニュー <a href="#link" class="a--link"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="dropdown">
+						<h3>メニュー <a href="#link" class="a--link toggle-link"></a></h3>
+						<div class="toggle-div">
+							<ul class="wrap-w">
+								<li>∟メニュー <a href="#link" class="a--link"></a></li>
+								<li>∟メニュー <a href="#link" class="a--link"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copy-right">
+				<span>©0000 SAMPLE Inc. All Rights Reserved.</span>
+			</div>
+		</section>
 	<!-- build:/footer -->
 	</footer>
 	<script src="assets/js/jquery-2.2.4.min.js"></script>
 	<script src="assets/js/fontawesome.min.js"></script>
 	<!-- <script src="assets/plugins/slick/slick.min.js"></script>
-	<script src="assets/plugins/smoothroll/smoothroll.js"></script>
-	<script src="js/general.js"></script> -->
+	<script src="assets/plugins/smoothroll/smoothroll.js"></script> -->
+	<script src="js/mainjs.js"></script>
 	<!-- build:addJs -->
 </body>
 </html>
