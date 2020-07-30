@@ -449,6 +449,11 @@
 		line-height: 5.5rem;
 		color: #383639;
 		letter-spacing: .2rem;
+		@include mobile{
+			line-height: 2.2rem;
+			padding-top: 1rem;
+			display: inline-block;
+		}
 	}
 }
 .menu-warp{
