@@ -57,41 +57,84 @@
   max-width: 100%;
   background-color: #fff;
   padding: 0 5rem;
-  display: flex;
-  flex-direction: row-reverse;
-  transform: translateX(calc(-100% + 10rem));
+  transform: translateX(-100%) translateX(10rem);
   transition: all 1s ease;
   z-index: 1030;
+}
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    transform: translateX(0%);
+    right: 0;
+    left: 100%;
+  }
 }
 .nav-menu.active {
   transform: translateX(0%);
   overflow-y: auto;
+  background-color: #222;
+}
+@media screen and (max-width: 768px) {
+  .nav-menu.active {
+    transform: translateX(-100%);
+  }
+  .nav-menu.active .menu-button {
+    transform: translateX(0);
+  }
 }
 .nav-menu .menu-button {
   min-width: 10rem;
   height: 100%;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   right: 0;
+  transition: all 0.5s ease;
+}
+@media screen and (max-width: 768px) {
+  .nav-menu .menu-button {
+    left: -10rem;
+    right: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .nav-menu .menu-button {
+    min-width: 5rem;
+  }
 }
 
 .button-open-menu {
-  outline: none;
+  outline: none !important;
   border: none;
   position: absolute;
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  transform: rotate(-90deg);
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
   transition: all 0.5s ease;
+}
+@media screen and (max-width: 768px) {
+  .button-open-menu {
+    top: 5rem;
+    transform: translate(0%, 0%);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .button-open-menu {
+    top: 2rem;
+    right: 0;
+  }
 }
 .button-open-menu.active {
   top: 5rem;
   right: 5rem;
+  color: #fff;
   transform: rotate(-360deg);
+}
+@media only screen and (max-width: 768px) {
+  .button-open-menu.active {
+    right: -4rem;
+  }
 }
 .button-open-menu.active span:nth-child(1) {
   transform: rotate(-45deg);
@@ -99,11 +142,15 @@
 .button-open-menu.active span:nth-child(3) {
   transform: rotate(45deg);
 }
+.button-open-menu.active span {
+  background-color: #fff;
+}
 .button-open-menu span {
   width: 1.5rem;
   height: 0.2rem;
   margin: 0.2rem;
   background-color: #383639;
+  transition: all 0.5s ease;
 }
 .button-open-menu::after {
   content: "MENU";
@@ -112,6 +159,11 @@
   position: absolute;
   top: 0.2rem;
   left: 3rem;
+}
+@media only screen and (max-width: 768px) {
+  .button-open-menu::after {
+    content: "";
+  }
 }
 
 /*========
@@ -129,12 +181,37 @@
   width: 10rem;
   text-align: center;
   display: flex;
-  background-color: white;
-  z-index: 1030;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  z-index: 1020;
+  border: 0.1rem solid #fff;
 }
-.entry-fixed span {
+@media screen and (max-width: 768px) {
+  .entry-fixed {
+    width: 5rem;
+    height: 5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.entry-fixed button {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.6rem;
   display: block;
-  writing-mode: tb-rl;
+  transform: rotate(90deg);
+  outline: none;
+  border: none;
+  width: 10rem;
+  height: 10rem;
+  background-color: transparent;
+}
+@media screen and (max-width: 768px) {
+  .entry-fixed button {
+    width: 5rem;
+    height: 5rem;
+    transform: rotate(0deg);
+  }
 }
 
 /*# sourceMappingURL=header.css.map */

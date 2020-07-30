@@ -54,51 +54,83 @@
 	max-width: 100%;
 	background-color: #fff;//#222;
 	padding: 0 5rem;
-	display: flex;
-	flex-direction: row-reverse;
-	transform: translateX(calc(-100% + 10rem));
-	
+	// display: flex;
+	// flex-direction: row-reverse;
+	transform: translateX(-100%) translateX(10rem);
 	transition: all 1s ease;
 	z-index: 1030;
+	@include mobile{
+		transform: translateX(0%);
+		right: 0;
+		left: 100%;
+	}
 	&.active{
 		transform: translateX(0%);
 		overflow-y: auto;
+		background-color: #222;
+		@include mobile{
+			transform: translateX(-100%);
+			.menu-button{transform: translateX(0);}
+		}
 	}
 	.menu-button{
 		min-width: 10rem;
 		height: 100%;
 		text-align: center;
-		display: flex; align-items: center; justify-content: center;
+		// display: flex; align-items: center; justify-content: center;
 		position: absolute;
 		right:0;
-		
+		transition: all .5s ease;
+		@include mobile{
+			left: -10rem;right: 100%;
+			// transform: translateX(100%);
+		}
+		@media only screen and (max-width: 767px){
+			min-width: 5rem;
+		}
 	}
 }
 .button-open-menu{
-	outline: none;
+	outline: none !important;
 	border: none;
 	position: absolute;
 	background-color: transparent;
 	display: flex;
 	flex-direction: column;
-	transform: rotate(-90deg);
+	top: 50%;
+	right: 50%;
+	transform: translate(-50%, -50%) rotate(-90deg);
 	transition: all .5s ease;
+	@include mobile{
+		top: 5rem;
+		transform: translate(0%, 0%);
+	}
+	@media only screen and (max-width: 767px){
+		top: 2rem;
+		right: 0;
+	}
 	&.active{
 		top: 5rem;
 		right: 5rem;
+		color: #fff;
 		transform: rotate(-360deg);
+		@media only screen and (max-width: 768px){
+			right: -4rem;
+		}
 		span:nth-child(1){
 			transform: rotate(-45deg);
 		}
 		span:nth-child(3){
 			transform: rotate(45deg);
 		}
+		span{background-color: #fff;}
 	}
 	span{
 		width: 1.5rem;
 		height: .2rem;
 		margin: .2rem;
 		background-color: #383639;
+		transition: all .5s ease;
 	}
 	&::after{
 		content: 'MENU';
@@ -107,6 +139,9 @@
 		position: absolute;
 		top: .2rem;
 		left: 3rem;
+		@media only screen and (max-width: 768px){
+			content: '';
+		}
 	}
 }
 /*========
@@ -124,11 +159,32 @@
 	height: 100%;
 	width: 10rem;
 	text-align: center;
-	display: flex;
-	background-color: white;
-	z-index: 1030;
-	span{
+	display: flex;justify-content: space-around;align-items: center;
+	background-color: #fff;
+	z-index: 1020;
+	border: .1rem solid #fff;
+	@include mobile{
+		width: 5rem;
+		height: 5rem;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	button{
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.6rem;
 		display: block;
-		writing-mode: tb-rl;
+		transform: rotate(90deg);
+		outline: none;
+		border: none;
+		width: 10rem;
+		height: 10rem;
+		background-color: transparent;
+		// writing-mode: tb-rl;
+		@include mobile{
+			// writing-mode: horizontal-tb;
+			width: 5rem;
+			height: 5rem;
+			transform: rotate(0deg);
+		}
 	}
 }

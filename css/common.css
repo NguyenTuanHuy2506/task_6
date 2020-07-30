@@ -156,6 +156,7 @@ body > main {
 .heading {
   font-size: 6.4rem;
   font-family: "Oswald", sans-serif;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .heading {
@@ -169,6 +170,7 @@ body > main {
   font-weight: bold;
   letter-spacing: 0.5rem;
   display: inline-block;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .heading-title {
@@ -249,6 +251,7 @@ body > main {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  transition: all 0.3s ease;
 }
 .rect-button span {
   width: 1.5rem;
@@ -266,6 +269,9 @@ body > main {
   position: absolute;
   top: -0.4rem;
   right: 0;
+}
+.rect-button:hover {
+  opacity: 0.8;
 }
 
 /*========
@@ -361,30 +367,49 @@ body > main {
   background-color: #7f40f1;
 }
 .dropdown .wrap-w li:hover::after {
-  animation: overlayer0 0.5s 1;
+  animation: passing-bar 1s ease 0s 1 normal forwards;
 }
 
 /*========
     title -- main
 ========*/
-@keyframes overlayer0 {
+@keyframes passing-bar {
   0% {
     width: 0%;
     left: 0%;
   }
-  45% {
+  50% {
     width: 100%;
     left: 0%;
   }
-  60% {
+  51% {
     width: 100%;
     left: 0%;
   }
   100% {
-    width: 100%;
+    width: 0%;
     left: 100%;
   }
 }
+.passing-bar {
+  --mycolor: #c01920;
+}
+
+.passing-bar::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  position: absolute;
+  background-color: var(--mycolor);
+}
+
+.passing-bar.move::before {
+  animation: passing-bar 1s ease 0s 1 normal forwards;
+}
+
 /*========
     title -- main
 ========*/

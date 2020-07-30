@@ -502,6 +502,7 @@
   height: 10rem !important;
 }
 .menu-warp .link-footer {
+  background-color: transparent;
   margin-top: 1rem !important;
 }
 .menu-warp .link-footer .dropdown {
