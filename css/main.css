@@ -285,6 +285,11 @@
   margin-left: -0.5rem;
   margin-top: 2rem;
 }
+@media screen and (max-width: 1024px) {
+  .message .wrap-3-4 .contain-text--big {
+    font-size: 3rem;
+  }
+}
 /*========
 	business
 ========*/

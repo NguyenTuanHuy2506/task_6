@@ -247,6 +247,9 @@
 			position: relative;
 			margin-left: -.5rem;
 			margin-top: 2rem;
+			@include ipadpro{
+				font-size: 3rem;
+			}
 		}
 		li:nth-child(2){
 		}

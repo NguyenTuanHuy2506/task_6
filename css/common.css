@@ -100,10 +100,10 @@ body > main {
     opacity: 1;
   }
   90% {
-    bottom: -15%;
+    bottom: -5%;
   }
   95% {
-    bottom: -15%;
+    bottom: -5%;
     opacity: 0;
   }
   100% {
@@ -165,10 +165,12 @@ body > main {
   font-family: "Oswald", sans-serif;
   position: relative;
   display: table;
+  letter-spacing: 0.5rem;
 }
 @media screen and (max-width: 768px) {
   .heading {
     font-size: 3.5rem;
+    letter-spacing: 0.2rem;
   }
 }
 
@@ -176,6 +178,7 @@ body > main {
   font-size: 3.6rem;
   margin: 0 3rem;
   font-weight: bold;
+  line-height: 1.5;
   letter-spacing: 0.5rem;
   display: inline-block;
   position: relative;
@@ -301,6 +304,7 @@ body > main {
 @media screen and (max-width: 768px) {
   .to-top-button {
     right: 3rem;
+    bottom: 3rem;
   }
 }
 .to-top-button span {
@@ -354,7 +358,7 @@ body > main {
   font-size: 1.6rem;
   color: #383639;
   letter-spacing: 0.2rem;
-  line-height: 2.5rem;
+  line-height: 3rem;
 }
 
 /*========
@@ -396,9 +400,6 @@ body > main {
   padding: 2rem 0;
   position: relative;
 }
-.dropdown .wrap-w {
-  padding-left: 2rem;
-}
 .dropdown .wrap-w li {
   position: relative;
   padding: 1rem 0;
@@ -406,9 +407,11 @@ body > main {
   font-size: 1.4rem;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 .dropdown .wrap-w li:hover {
   opacity: 0.8;
+  padding-left: 2rem;
 }
 
 /*========

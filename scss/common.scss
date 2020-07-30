@@ -93,10 +93,10 @@ body>main {
     opacity: 1;
   }
   90%{
-    bottom: -15%;
+    bottom: -5%;
   }
   95%{
-    bottom: -15%;
+    bottom: -5%;
     opacity: 0;
   }
   100%{
@@ -153,8 +153,10 @@ body>main {
     font-family: 'Oswald', sans-serif;
     position: relative;
     display: table;
+    letter-spacing: .5rem;
     @include mobile{
         font-size: 3.5rem;
+        letter-spacing: .2rem;
     }
 }
 
@@ -162,6 +164,7 @@ body>main {
     font-size: 3.6rem;
     margin: 0 3rem;
     font-weight: bold;
+    line-height: 1.5;
     letter-spacing: .5rem;
     display: inline-block;
     position: relative;
@@ -274,6 +277,7 @@ body>main {
     transition: all .3s ease;
     @include mobile{
         right: 3rem;
+        bottom: 3rem;
     }
     span{
         width: 3rem;
@@ -315,7 +319,7 @@ body>main {
     font-size: 1.6rem;
     color: #383639;
     letter-spacing: .2rem;
-    line-height: 2.5rem;
+    line-height: 3rem;
 }
 /*========
     more button
@@ -353,18 +357,17 @@ body>main {
         padding: 2rem 0;
         position: relative;
     }
-    .wrap-w{
-        padding-left: 2rem;
-    }
     .wrap-w li{
         position: relative;
         padding: 1rem 0;
         color: #eee;
         font-size: 1.4rem;
         position: relative;
-        overflow: hidden; 
+        overflow: hidden;
+        transition: all .3s ease;
         &:hover{
             opacity: .8;
+            padding-left: 2rem;
         }
     }
 }

@@ -90,6 +90,6 @@ $('.to-top-button').click(function(event) {
     /* Act on the event */
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
-    }, 1000);
+    }, 1000, 'linear');
     return false;
 });	
