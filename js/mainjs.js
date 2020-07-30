@@ -67,47 +67,9 @@ $(window).on('scroll', function(){
 		var scroll = $(window).scrollTop();
 		var windowHeight = $(window).height();
 		if (scroll > imgPos - windowHeight + windowHeight / 4){
-			$(this).addClass('active');
-			$(this).css({'--mycolor': '#000'});
+			// $(this).addClass('active');
+			// console.log($(this).css('--mycolor'));
 			$(this).addClass('move');
 		}
 	});
 });
-
-function random_color(){
-	let _rd = Math.floor(Math.random() * 10);
-	let _color = '#00ccff';
-	switch(_rd){
-		case 0:{
-			_color = '#ad0a20';break;
-		}
-		case 1:{
-			_color = '#ff3333';break;
-		}
-		case 2:{
-			_color = '#00ccff';break;
-		}
-		case 3:{
-			_color =  '#9999ff';break;
-		}
-		case 4:{
-			_color = '#ffff66';break;
-		}
-		case 5:{
-			_color = '#ff4da6';break;
-		}
-		case 6:{
-			_color = '#f0f0f0';break;
-		}
-		case 7:{
-			_color = '#1f1f1f';break;
-		}
-		case 8:{
-			_color = '#1f1';break;
-		}
-		case 9:{
-			_color = '#fca232';break;
-		}
-	}
-	return _color;
-}

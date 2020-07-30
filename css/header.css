@@ -63,6 +63,7 @@
 }
 @media screen and (max-width: 768px) {
   .nav-menu {
+    width: 100%;
     transform: translateX(0%);
     right: 0;
     left: 100%;
@@ -110,7 +111,7 @@
   flex-direction: column;
   top: 50%;
   right: 50%;
-  transform: translate(-50%, -50%) rotate(-90deg);
+  transform: translate(50%, -50%) rotate(-90deg);
   transition: all 0.5s ease;
 }
 @media screen and (max-width: 768px) {
@@ -136,8 +137,21 @@
     right: -4rem;
   }
 }
+@media only screen and (max-width: 767px) {
+  .button-open-menu.active {
+    top: 2rem;
+  }
+}
 .button-open-menu.active span:nth-child(1) {
-  transform: rotate(-45deg);
+  transform: translateY(0.2rem) rotate(-45deg);
+}
+@media screen and (max-width: 768px) {
+  .button-open-menu.active span:nth-child(1) {
+    transform: translateY(-0.5rem) rotate(-45deg);
+  }
+}
+.button-open-menu.active span:nth-child(2) {
+  opacity: 0;
 }
 .button-open-menu.active span:nth-child(3) {
   transform: rotate(45deg);
@@ -151,6 +165,11 @@
   margin: 0.2rem;
   background-color: #383639;
   transition: all 0.5s ease;
+}
+@media screen and (max-width: 768px) {
+  .button-open-menu span {
+    width: 2.5rem;
+  }
 }
 .button-open-menu::after {
   content: "MENU";

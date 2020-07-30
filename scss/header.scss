@@ -60,6 +60,7 @@
 	transition: all 1s ease;
 	z-index: 1030;
 	@include mobile{
+		width: 100%;
 		transform: translateX(0%);
 		right: 0;
 		left: 100%;
@@ -99,7 +100,7 @@
 	flex-direction: column;
 	top: 50%;
 	right: 50%;
-	transform: translate(-50%, -50%) rotate(-90deg);
+	transform: translate(50%, -50%) rotate(-90deg);
 	transition: all .5s ease;
 	@include mobile{
 		top: 5rem;
@@ -117,8 +118,17 @@
 		@media only screen and (max-width: 768px){
 			right: -4rem;
 		}
+		@media only screen and (max-width: 767px){
+			top: 2rem;
+		}
 		span:nth-child(1){
-			transform: rotate(-45deg);
+			transform: translateY(.2rem) rotate(-45deg);
+			@include mobile{
+				transform: translateY(-.5rem) rotate(-45deg);
+			}
+		}
+		span:nth-child(2){
+			opacity: 0;
 		}
 		span:nth-child(3){
 			transform: rotate(45deg);
@@ -131,6 +141,9 @@
 		margin: .2rem;
 		background-color: #383639;
 		transition: all .5s ease;
+		@include mobile{
+			width: 2.5rem;
+		}
 	}
 	&::after{
 		content: 'MENU';

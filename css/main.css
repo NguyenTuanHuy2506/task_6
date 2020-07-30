@@ -487,23 +487,9 @@
   width: 100%;
   height: 100%;
 }
-.menu-warp .em-info .heading-title {
-  color: #c01920;
-}
-.menu-warp .em-info .wrap {
-  flex-direction: column;
-}
-.menu-warp .em-info .wrap .sub-title {
-  color: #eee;
-  font-size: 1.8rem;
-}
-.menu-warp .em-info .circle-icon {
-  width: 10rem !important;
-  height: 10rem !important;
-}
 .menu-warp .link-footer {
   background-color: transparent;
-  margin-top: 1rem !important;
+  margin-top: 10rem !important;
 }
 .menu-warp .link-footer .dropdown {
   padding: 0;
