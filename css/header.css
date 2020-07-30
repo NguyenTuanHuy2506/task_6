@@ -30,6 +30,9 @@
     padding: 0;
   }
 }
+.header-logo:hover {
+  opacity: 0.8;
+}
 .header-recruit {
   font-size: 2rem;
   font-family: "Oswald", sans-serif;

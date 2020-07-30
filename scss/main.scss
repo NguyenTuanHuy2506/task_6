@@ -41,7 +41,7 @@
 	width: 100%;
 	background-color: #222;
 	padding: 8rem 0;
-	@include mobile{
+	@include ipadpro{
 		padding: 4rem 2rem;
 	}
 	.sub-heading{
@@ -74,7 +74,7 @@
 	margin-top: 10rem;
 	position: relative;
 	overflow: hidden;
-	@include mobile{
+	@include ipadpro{
 		margin-top: 3rem;
 		padding: 0 2rem;
 	}
@@ -237,10 +237,10 @@
 	margin: 18rem 0;
 	@include ipadpro{
 		margin: 8rem 0;
+		padding: 0 2rem;
 	}
 	@include mobile{
 		margin: 2rem 0;
-		padding: 0 2rem;
 	}
 	.wrap-3-4{
 		.contain-text--big{
@@ -347,7 +347,7 @@
 	}
 }
 .working-env{
-	@include mobile{
+	@include ipadpro{
 		padding: 0 2rem;
 	}
 	.heading-title{
@@ -381,7 +381,7 @@
 .em-info{
 	width: 100%;
 	padding-top: 5.5rem;
-	@include mobile{
+	@include ipadpro{
 		padding: 0 2rem;
 	}
 	.heading-title{
@@ -429,6 +429,7 @@
 	margin-top: 8rem;
 	background-color: #222;
 	.wrap{
+		@include ipadpro{padding: 0 2rem;}
 		.dropdown{
 			
 			h3{

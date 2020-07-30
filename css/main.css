@@ -40,7 +40,7 @@
   background-color: #222;
   padding: 8rem 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .news {
     padding: 4rem 2rem;
   }
@@ -72,7 +72,7 @@
   position: relative;
   overflow: hidden;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .special {
     margin-top: 3rem;
     padding: 0 2rem;
@@ -272,12 +272,12 @@
 @media screen and (max-width: 1024px) {
   .message {
     margin: 8rem 0;
+    padding: 0 2rem;
   }
 }
 @media screen and (max-width: 768px) {
   .message {
     margin: 2rem 0;
-    padding: 0 2rem;
   }
 }
 .message .wrap-3-4 .contain-text--big {
@@ -391,7 +391,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .working-env {
     padding: 0 2rem;
   }
@@ -428,7 +428,7 @@
   width: 100%;
   padding-top: 5.5rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .em-info {
     padding: 0 2rem;
   }
@@ -482,6 +482,11 @@
   width: 100%;
   margin-top: 8rem;
   background-color: #222;
+}
+@media screen and (max-width: 1024px) {
+  .link-footer .wrap {
+    padding: 0 2rem;
+  }
 }
 .copy-right {
   width: 100%;
