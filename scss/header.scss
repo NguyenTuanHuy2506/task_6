@@ -70,24 +70,31 @@
 		transform: translateX(0%);
 		overflow-y: auto;
 		background-color: #222;
+		.menu-button{top: 5rem;}
 		@include mobile{
 			transform: translateX(-100%);
 			.menu-button{transform: translateX(0);}
 		}
+		@media only screen and (max-width: 767px){.menu-button{top: 2rem;}}
 	}
 	.menu-button{
-		min-width: 10rem;height: 100%;
+		min-width: 10rem;height: 10%;
 		text-align: center;
-		// display: flex; align-items: center; justify-content: center;
 		position: absolute;
+		top: 50%;
 		right:0;
+		transform: translateY(-50%);
 		transition: all .5s ease;
 		@include mobile{
 			left: -10rem;right: 100%;
-			// transform: translateX(100%);
+			top: 5rem;
 		}
 		@media only screen and (max-width: 767px){
-			min-width: 5rem;
+			min-width: 3rem;
+			max-width: 3rem;
+			left: -3rem;
+			top: 0;
+			transform: translateY(0);
 		}
 	}
 }
@@ -114,15 +121,15 @@
 		right: 0;
 	}
 	&.active{
-		top: 5rem;
+		top: 0;
 		right: 5rem;
 		color: #fff;
 		transform: rotate(-360deg);
+		@media only screen and (min-width: 769px){
+			top: 40%;
+		}
 		@media only screen and (max-width: 768px){
 			right: -4rem;
-		}
-		@media only screen and (max-width: 767px){
-			top: 2rem;
 		}
 		span:nth-child(1){
 			transform: translateY(.2rem) rotate(-45deg);

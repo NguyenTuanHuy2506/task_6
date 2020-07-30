@@ -507,6 +507,11 @@
   background-color: transparent;
   margin-top: 10rem !important;
 }
+@media screen and (max-width: 768px) {
+  .menu-warp .link-footer {
+    margin-top: 6rem !important;
+  }
+}
 .menu-warp .link-footer .dropdown {
   padding: 0;
 }

@@ -461,6 +461,9 @@
 	.link-footer{
 		background-color: transparent;
 		margin-top: 10rem !important;
+		@include mobile{
+			margin-top: 6rem !important;
+		}
 		.dropdown{
 			padding: 0;
 			h3{
