@@ -393,6 +393,9 @@
 		@media only screen and (max-width: 767px){ flex-wrap: wrap; }
 		li{
 			text-align: center;
+			&:hover{
+				opacity: .8;
+			}
 			.sub-title{
 				font-size: 2.4rem;
 			}

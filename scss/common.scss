@@ -57,7 +57,7 @@ body>main {
     bottom: 0;
     margin: 0 auto;
     z-index: 120;
-    animation: ascroll 1.5s infinite;
+    animation: ascroll 2s infinite;
     text-decoration: none !important;
     @include ipadpro{
         height: 4rem;
@@ -92,10 +92,10 @@ body>main {
     bottom: 0;
     opacity: 1;
   }
-  60%{
+  90%{
     bottom: -15%;
   }
-  80%{
+  95%{
     bottom: -15%;
     opacity: 0;
   }
@@ -142,6 +142,7 @@ body>main {
             border-bottom: 1.2rem solid transparent;
         }  
     }
+    &:hover{opacity: .8;}
 }
 
 /*========
@@ -258,6 +259,30 @@ body>main {
     &:hover{
         opacity: .8;
     }
+}
+.to-top-button{
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    background-color: #c01920;
+    right: 13rem;
+    bottom: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1020;
+    transition: all .3s ease;
+    @include mobile{
+        right: 3rem;
+    }
+    span{
+        width: 3rem;
+        height: .2rem;
+        background-color: #fff;
+        &:nth-child(1){transform: translateX(.4rem) rotate(-45deg);}
+        &:nth-child(2){transform: translateX(-.4rem) rotate(45deg);}
+    }
+    &:hover{opacity: .8;}
 }
 /*========
     object decorate

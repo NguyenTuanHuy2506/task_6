@@ -448,6 +448,9 @@
 .em-info .wrap li {
   text-align: center;
 }
+.em-info .wrap li:hover {
+  opacity: 0.8;
+}
 .em-info .wrap li .sub-title {
   font-size: 2.4rem;
 }
