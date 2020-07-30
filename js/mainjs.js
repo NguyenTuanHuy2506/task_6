@@ -57,7 +57,7 @@ $('.mv').bind('mousewheel', function(e) {
 	{
 		_mvScroll = 1;
 		$('html, body').animate({
-	 		scrollTop: $('.news').offset().top - 100 }, 800, function(){_mvScroll = 0;});
+	 		scrollTop: $('.news').offset().top - 100 }, 300, function(){_mvScroll = 0;});
 }});
 
 	
@@ -67,9 +67,13 @@ $(window).on('scroll', function(){
 		var scroll = $(window).scrollTop();
 		var windowHeight = $(window).height();
 		if (scroll > imgPos - windowHeight + windowHeight / 4){
-			// $(this).addClass('active');
+			if(!$(this).hasClass('move')){
+				// $(this).get(0).style.setProperty("--mycolor", _t);
+				$(this).addClass('move');
+			}
+			
 			// console.log($(this).css('--mycolor'));
-			$(this).addClass('move');
+			
 		}
 	});
 });

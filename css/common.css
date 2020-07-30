@@ -18,6 +18,10 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body > main {
   -ms-overflow-x: hidden;
 }
@@ -157,6 +161,7 @@ body > main {
   font-size: 6.4rem;
   font-family: "Oswald", sans-serif;
   position: relative;
+  display: table;
 }
 @media screen and (max-width: 768px) {
   .heading {
@@ -186,6 +191,8 @@ body > main {
   font-family: "Oswald", sans-serif;
   padding-bottom: 3rem;
   position: relative;
+  display: table;
+  letter-spacing: 0.3rem;
 }
 .sub-heading h3::after {
   content: "";
@@ -202,6 +209,7 @@ body > main {
   font-size: 3.6rem;
   margin: 3rem 0;
   display: block;
+  letter-spacing: 0.5rem;
 }
 
 /*========
@@ -329,7 +337,14 @@ body > main {
   margin: 0 auto;
   border-bottom: 0.2rem solid white;
 }
+.more-button:hover {
+  color: white;
+  opacity: 0.8;
+}
 
+/*========
+    drop menu
+========*/
 .dropdown {
   width: 100%;
   padding: 4rem 0;
@@ -356,18 +371,8 @@ body > main {
   position: relative;
   overflow: hidden;
 }
-.dropdown .wrap-w li::after {
-  content: "";
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 0;
-  position: absolute;
-  background-color: #7f40f1;
-}
-.dropdown .wrap-w li:hover::after {
-  animation: passing-bar 1s ease 0s 1 normal forwards;
+.dropdown .wrap-w li:hover {
+  opacity: 0.8;
 }
 
 /*========
@@ -391,10 +396,6 @@ body > main {
     left: 100%;
   }
 }
-.passing-bar {
-  --mycolor: #c01920;
-}
-
 .passing-bar::before {
   content: "";
   top: 0;
@@ -403,7 +404,7 @@ body > main {
   right: 0;
   width: 0;
   position: absolute;
-  background-color: var(--mycolor);
+  background-color: #c01920;
 }
 
 .passing-bar.move::before {
@@ -411,7 +412,7 @@ body > main {
 }
 
 /*========
-    title -- main
+    scrool
 ========*/
 @media only screen and (min-width: 768px) {
   ::-webkit-scrollbar {

@@ -73,6 +73,7 @@
 .special{
 	margin-top: 10rem;
 	position: relative;
+	overflow: hidden;
 	@include mobile{
 		margin-top: 3rem;
 		padding: 0 2rem;
@@ -242,6 +243,11 @@
 		padding: 0 2rem;
 	}
 	.wrap-3-4{
+		.contain-text--big{
+			position: relative;
+			margin-left: -.5rem;
+			margin-top: 2rem;
+		}
 		li:nth-child(2){
 		}
 	}
@@ -439,10 +445,11 @@
 		font-weight: bold;
 		line-height: 5.5rem;
 		color: #383639;
+		letter-spacing: .2rem;
 	}
 }
 .menu-warp{
-		width: 100%;height: 100%;
+		width: 100%;
 	.link-footer{
 		background-color: transparent;
 		margin-top: 10rem !important;
@@ -450,7 +457,7 @@
 			padding: 0;
 			h3{
 				font-weight: bold;
-				color: #c01920;
+				color: #fff;
 				font-size: 2.2rem;
 			}
 			.toggle-div{
